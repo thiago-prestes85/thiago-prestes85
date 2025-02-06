@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Thiago Silva" />
-    <meta
-      name="description"
-      content="My website with some information about me"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="author" content="Thiago Silva">
+    <meta name="description" content="My website with some information about me">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website!!</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
     <div class="width-wrap">
@@ -26,18 +23,36 @@
       <main>
         <h1>Welcome to Thiago’s Website!</h1>
         <p>
-          Hello! My name is Thiago I`m brazilian and a Computer Programming at
-          Sault College .
+          Hello! My name is Thiago. I’m Brazilian and a Computer Programming student at Sault College.
         </p>
         <p>
           I learned about Information Systems in Brazil a long time ago and I'm
           looking to update myself.
         </p>
 
+        <!-- Adding the Image with Figure -->
+
         <h2>My Favourite Things</h2>
-        <a href="https://pearljam.com" target="_blank">
-          <img src="images/PJ.png" alt="My favourite band" />
-        </a>
+
+        <figure>
+          <a href="https://pearljam.com" target="_blank">
+            <img src="images/PJ.png" alt="My favourite band">
+          </a>
+          <figcaption>Pearl Jam - My Favorite Band</figcaption>
+         </figure> 
+
+         
+        <!-- Thumbnails of Thiago's photo -->
+
+        <h2>About Me</h2>
+        <picture>
+          <source srcset="images/thiago_150.jpg" media="(max-width: 500px)">
+          <source srcset="images/thiago_300.jpg" media="(min-width: 501px)">
+          <img src="images/thiago_300.jpg" alt="Thiago Silva">
+         </picture>
+         <br>
+         <a href="images/thiago_large.jpg" target="_blank">Click to view full-size image</a> 
+
 
         <h3>Favorite Movies</h3>
         <ol>
@@ -48,24 +63,50 @@
 
         <h3>Haiku</h3>
         <p>
-          Even the strong wind,<br />
-          cannot put out the fire—<br />
-          that burns from within.<br />
+          Even the strong wind,<br>
+          cannot put out the fire—<br>
+          that burns from within.<br>
           <cite>by <span class="author">Santōka Taneda</span></cite>
         </p>
+
+        
+        <!-- LibriVox embedded audio -->
+        <h3>Public Domain Audiobook</h3>
+        <audio controls>
+          <source src="https://www.archive.org/download/art_public_speaking_1101_librivox/artpublicspeaking_00_carnagey_esenwein.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          <a href="https://www.archive.org/download/art_public_speaking_1101_librivox/artpublicspeaking_00_carnagey_esenwein.mp3" download>Click here to download</a>
+        </audio>  
+
+          <!-- YouTube video -->
+          <h3>YouTube Video</h3>
+          <iframe width="560" height="315" 
+                  src="https://www.youtube.com/embed/Tuw8hxrFBH8" 
+                  style="border: none;"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
+  
+
       </main>
       <footer>
-        <hr />
+        <hr>
         <blockquote>
-          ""The only way to do great work is to love what you do."
+          "The only way to do great work is to love what you do."
         </blockquote>
         <cite>&mdash; <span class="author">Steve Jobs</span></cite>
+
+        <!-- Logo with different resolutions -->
+         <picture>
+          <source srcset="images/sc-logo_140.png 2x, images/sc-logo_105.png 1.5x">
+          <img src="images/sc-logo.png" alt="Sault College Logo" width="70">
+        </picture>
+            
         <p>
           &copy; 2021
-          <a
-            href="mailto:23054251@saultcollege.ca?subject=Message%20from%20CSD112%20Website"
-            >Thiago Silva</a
-          >
+          <a href="mailto:23054251@saultcollege.ca?subject=Message%20from%20CSD112%20Website"
+            >Thiago Silva
+          </a>
         </p>
       </footer>
       <a href="#top" title="Back to top">◤</a>
