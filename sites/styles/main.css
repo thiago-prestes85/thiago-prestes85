@@ -29,7 +29,7 @@ footer hr {
 
   border: none;
 
-  border-bottom: 3px dotted #999; /* You can choose any color */
+  border-bottom: 3px dotted #bd6c6c; /* You can choose any color */
 }
 
 dt::after {
@@ -39,26 +39,26 @@ dt::after {
 /* PART 3 */
 
 body {
-  background-color: #f0f0f0; /* Light gray background */
-  color: #333333; /* Dark gray text */
+  background-color: #dcdcdc; 
+  color: #333333; 
 }
 
 h1,
 h2,
 h3 {
-  color: #006699; /* Dark blue */
+  color: #006699; 
 }
 
 a {
-  color: #cc0000; /* Dark red */
+  color: #cc0000; 
 }
 
 header nav a {
-  color: #009933; /* Green */
+  color: #009933; 
 }
 
 ::selection {
-  background-color: #ffff99; /* Light yellow background on text selection */
+  background-color: #ffff99; 
 }
 
 /* PART 4 */
