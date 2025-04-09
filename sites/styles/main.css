@@ -1,5 +1,3 @@
-/* PART 2 */
-
 *,
 *::before,
 *::after {
@@ -36,32 +34,28 @@ dt::after {
   content: ":";
 }
 
-/* PART 3 */
-
 body {
-  background-color: #dcdcdc; 
-  color: #333333; 
+  background-color: #dcdcdc;
+  color: #333333;
 }
 
 h1,
 h2,
 h3 {
-  color: #006699; 
+  color: #006699;
 }
 
 a {
-  color: #cc0000; 
+  color: #cc0000;
 }
 
 header nav a {
-  color: #009933; 
+  color: #009933;
 }
 
 ::selection {
-  background-color: #ffff99; 
+  background-color: #ffff99;
 }
-
-/* PART 4 */
 
 header {
   border-top: 4px solid rgba(0, 0, 0, 0.1);
@@ -79,10 +73,8 @@ header nav ul {
   margin: 0;
   padding: 0;
   list-style: none; /* REMOVE the bullet points */
-}
-
-header nav ul li {
-  display: inline;
+  display: flex; /* transform menu into Flexbox */
+  justify-content: center; /*centralizes the menu */
 }
 
 header nav ul li a {
@@ -105,8 +97,6 @@ header nav ul li a:hover {
   border-color: #009933; /* highlight color on hover */
 }
 
-/* PART 5 */
-
 table th,
 table td {
   padding: 0.3em 1em;
@@ -128,8 +118,6 @@ tbody td {
 tbody tr:nth-child(even) td {
   background-color: rgba(0, 0, 0, 0.15);
 }
-
-/* PART 6 */
 
 label {
   display: block;
@@ -154,4 +142,45 @@ input[type="submit"] {
 /* Highlight invalid input fields */
 input:invalid {
   background-color: #ffcccc;
+}
+
+/* Tabs - Favourites Section */
+.favourites {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favourites > div {
+  display: none;
+}
+
+.favourites input:checked + label + div {
+  display: block;
+  width: 100%;
+}
+
+.favourites input {
+  display: none;
+}
+
+.favourites label {
+  order: -1;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.favourites input:checked + label {
+  color: purple;
+  border-bottom: 3px solid purple;
+}
+
+/* Sticky and rotating Back to Top button */
+a[href="#top"] {
+  position: sticky;
+  bottom: 1em;
+  left: 90%;
+  display: inline-block;
+  transform: rotate(270deg);
+  font-size: 2rem;
+  text-decoration: none;
 }
