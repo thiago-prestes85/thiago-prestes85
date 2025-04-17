@@ -1,50 +1,51 @@
+/* Box sizing rule */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Main wrapper */
 .width-wrap {
   max-width: 960px;
-
   margin: 0 auto;
-
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-bottom: 2em;
-
+  padding: 0 2em 2em;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-top: none;
-
   margin-bottom: 3em;
 }
 
+/* Footer horizontal rule */
 footer hr {
   width: clamp(300px, 50vw, 890px);
-
-  margin-top: 3em;
-  margin-bottom: 2em;
-
+  margin: 3em 0 2em;
   border: none;
-
-  border-bottom: 3px dotted #bd6c6c; /* You can choose any color */
+  border-bottom: 3px dotted #bd6c6c;
 }
 
+/* Definition lists */
 dt::after {
   content: ":";
 }
 
+/* Body and basic text colors */
 body {
   background-color: #dcdcdc;
   color: #333333;
 }
 
-h1,
-h2,
-h3 {
+/* Images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Headings */
+h1, h2, h3 {
   color: #006699;
 }
 
+/* Links */
 a {
   color: #cc0000;
 }
@@ -53,83 +54,73 @@ header nav a {
   color: #009933;
 }
 
+/* Text selection highlight */
 ::selection {
   background-color: #ffff99;
 }
 
+/* Header styling */
 header {
   border-top: 4px solid rgba(0, 0, 0, 0.1);
-  margin-left: -2em; /* same as width-wrap padding */
+  margin-left: -2em;
   margin-right: -2em;
 }
 
 header nav {
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-  padding-left: 2em; /* align with content padding */
-  padding-right: 2em;
+  padding: 0 2em;
 }
 
 header nav ul {
   margin: 0;
   padding: 0;
-  list-style: none; /* REMOVE the bullet points */
-  display: flex; /* transform menu into Flexbox */
-  justify-content: center; /*centralizes the menu */
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li a {
-  display: inline-block; /* allows box model properties */
+  display: inline-block;
   vertical-align: bottom;
-  text-decoration: none; /* remove underline */
-  color: #009933; /* nav link color from Part 3 */
-
-  /* Borders for the hover effect */
+  text-decoration: none;
+  color: #009933;
   border-top: 4px solid transparent;
-
-  /* Padding to increase clickable area */
-  padding-top: 1em;
-  padding-bottom: 0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 1em 1em 0.5em;
+  transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
-  border-color: #009933; /* highlight color on hover */
+  border-color: #009933;
 }
 
+/* Table styling */
 table th,
 table td {
   padding: 0.3em 1em;
 }
 
-/* Background for thead, tfoot, and tbody th cells */
-thead,
-tfoot,
-tbody th {
+thead, tfoot, tbody th {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Background color for tbody cells */
 tbody td {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Zebra striping for even rows in tbody */
 tbody tr:nth-child(even) td {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+/* Forms */
 label {
   display: block;
 }
 
-/* Checkbox and radio labels inline */
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline;
 }
 
-/* Style the submit button */
 input[type="submit"] {
   border: none;
   padding: 1em 3em;
@@ -139,12 +130,11 @@ input[type="submit"] {
   font-size: 1em;
 }
 
-/* Highlight invalid input fields */
 input:invalid {
   background-color: #ffcccc;
 }
 
-/* Tabs - Favourites Section */
+/* Tabs (Favourite Things section) */
 .favourites {
   display: flex;
   flex-wrap: wrap;
@@ -174,7 +164,7 @@ input:invalid {
   border-bottom: 3px solid purple;
 }
 
-/* Sticky and rotating Back to Top button */
+/* Sticky back to top button */
 a[href="#top"] {
   position: sticky;
   bottom: 1em;
@@ -183,4 +173,68 @@ a[href="#top"] {
   transform: rotate(270deg);
   font-size: 2rem;
   text-decoration: none;
+}
+
+/* ===== Lab 8: Responsive Paperclip ===== */
+.photo-clip {
+  position: relative;
+  display: inline-block;
+}
+
+.photo-clip img.clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .photo-clip img.clip {
+    display: none;
+  }
+}
+
+/* ===== Lab 8: Responsive Gallery ===== */
+.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 2rem;
+  overflow-x: auto;
+}
+
+.gallery figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Lab 8: Responsive Table ===== */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table-wrap table {
+  width: 100%;
+  min-width: 600px;
 }
