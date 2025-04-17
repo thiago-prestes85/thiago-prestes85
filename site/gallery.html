@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiago Silva" />
+    <meta name="description" content="A gallery page using CSS Grid" />
+    <title>Gallery</title>
+
+    <!-- Fonts and External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Corrigido o caminho dos CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <div class="width-wrap">
+      <!-- Header Section -->
+      <header id="top">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="glossary.html">Glossary</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <h1>Gallery</h1>
+
+        <!-- Gallery Section using CSS Grid -->
+        <div class="gallery">
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=1"
+              alt="Random image 1"
+            />
+            <figcaption>Image 1</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=2"
+              alt="Random image 2"
+            />
+            <figcaption>Image 2</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=3"
+              alt="Random image 3"
+            />
+            <figcaption>Image 3</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=4"
+              alt="Random image 4"
+            />
+            <figcaption>Image 4</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=5"
+              alt="Random image 5"
+            />
+            <figcaption>Image 5</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="https://loremflickr.com/320/240?random=6"
+              alt="Random image 6"
+            />
+            <figcaption>Image 6</figcaption>
+          </figure>
+        </div>
+      </main>
+
+      <!-- Footer Section -->
+      <footer>
+        <hr />
+        <blockquote>
+          "The only way to do great work is to love what you do."
+        </blockquote>
+        <cite>&mdash; <span class="author">Steve Jobs</span></cite>
+        <p>
+          &copy; 2021
+          <a
+            href="mailto:23054251@saultcollege.ca?subject=Message%20from%20CSD112%20Website"
+          >
+            Thiago Silva
+          </a>
+        </p>
+      </footer>
+
+      <!-- Sticky Back to Top Button -->
+      <a href="#top" title="Back to top">◤</a>
+    </div>
+  </body>
+</html>
